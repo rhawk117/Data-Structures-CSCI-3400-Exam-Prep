@@ -12,7 +12,6 @@ namespace _3400_DSA_Prep.UserUI.DataStructures
     {
         public CircularQueue<int> circQueue;
 
-
         public CircQueueView(CircularQueue<int> aQ = null) : base("Queue")
         {
             if (aQ == null)

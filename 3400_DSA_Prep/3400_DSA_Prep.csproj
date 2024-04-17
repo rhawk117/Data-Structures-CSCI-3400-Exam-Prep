@@ -55,6 +55,7 @@
     <Compile Include="UserUI\AlgoUI.cs" />
     <Compile Include="UserUI\Algorithms\AlgoUiComponents.cs" />
     <Compile Include="UserUI\DataStructures\AVLView.cs" />
+    <Compile Include="UserUI\DataStructures\BSTView.cs" />
     <Compile Include="UserUI\DataStructures\CircQueueView.cs" />
     <Compile Include="UserUI\DataStructures\DictView.cs" />
     <Compile Include="UserUI\DataStructures\LinkedListView.cs" />

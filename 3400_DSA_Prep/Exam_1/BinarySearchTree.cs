@@ -2,14 +2,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _3400_Exam1_Prep
 {
-    public class BinSearchTree<T> where T : IComparable<T>
+    public class BinrySearchTree<T> where T : IComparable<T>
     {
         /// <summary>
         /// A priave node class to hide the internal implementation details
@@ -50,7 +46,7 @@ namespace _3400_Exam1_Prep
         /// </summary>
         private Node root;
 
-        public BinSearchTree()
+        public BinrySearchTree()
         {
             root = null;
         }
