@@ -736,9 +736,6 @@ namespace _3400_DSA_Prep
             Console.WriteLine("[ Performing in-order traversal of the AVL Tree.. ]");
             inOrder(root);
         }
-
-
-
         private void inOrder(Node ptr)
         {
             if (ptr == null)

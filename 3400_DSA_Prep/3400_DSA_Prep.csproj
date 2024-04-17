@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exam_1\BinarySearchTree.cs" />
+    <Compile Include="Exam_1\LinkedList.cs" />
+    <Compile Include="Exam_1\Queue.cs" />
+    <Compile Include="Exam_1\Stack.cs" />
     <Compile Include="Exam_2\AVL_Tree.cs" />
     <Compile Include="Exam_2\Dictionary.cs" />
     <Compile Include="Exam_2\PriorityQueue.cs" />
@@ -51,7 +55,11 @@
     <Compile Include="UserUI\AlgoUI.cs" />
     <Compile Include="UserUI\Algorithms\AlgoUiComponents.cs" />
     <Compile Include="UserUI\DataStructures\AVLView.cs" />
+    <Compile Include="UserUI\DataStructures\CircQueueView.cs" />
     <Compile Include="UserUI\DataStructures\DictView.cs" />
+    <Compile Include="UserUI\DataStructures\LinkedListView.cs" />
+    <Compile Include="UserUI\DataStructures\StackView.cs" />
+    <Compile Include="UserUI\Exam1UI.cs" />
     <Compile Include="UserUI\Exam2UI.cs" />
     <Compile Include="UserUI\ExamViewer.cs" />
     <Compile Include="UserUI\MainUI.cs" />
@@ -67,8 +75,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Exam_1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
