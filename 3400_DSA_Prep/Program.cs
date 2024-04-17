@@ -12,6 +12,8 @@ namespace _3400_DSA_Prep
         static void Main(string[] args)
         {
             //Disclaimer.StartUp();
+            MainUI main = new MainUI();
+            main.runHeader();
             Exam2UI t = new Exam2UI();
             t.RenderUI();
 

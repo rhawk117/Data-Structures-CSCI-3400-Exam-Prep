@@ -44,6 +44,11 @@ namespace _3400_DSA_Prep
             ReadKey(); color();
         }
 
+        public static void delayMessage(string message, int delay = 2000)
+        {
+            WriteLine(message);
+            System.Threading.Thread.Sleep(delay);
+        }
 
 
 
