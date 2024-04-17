@@ -12,6 +12,8 @@ namespace _3400_DSA_Prep.UserUI
 
         protected View currentUI;
 
+        protected ConsoleColor color;
+
         // used in ctor by children
         protected virtual void setComponents() { }
 
@@ -25,6 +27,7 @@ namespace _3400_DSA_Prep.UserUI
             char input;
 
             Console.Clear();
+            Console.ForegroundColor = color;
             Console.WriteLine(menuText);
 
             input = char.ToLower(Console.ReadKey().KeyChar);
@@ -39,16 +42,13 @@ namespace _3400_DSA_Prep.UserUI
             }
         }
 
-        protected virtual void handleKeys(char keyPressed)
-        {
-
-        }
+        protected virtual void handleKeys(char keyPressed) { }
         protected void loopUI()
         {
             currentUI = null;
             RenderUI();
         }
-        protected void switchWindow(View newUI)
+        protected virtual void switchWindow(View newUI)
         {
             currentUI = newUI;
             currentUI.Run();

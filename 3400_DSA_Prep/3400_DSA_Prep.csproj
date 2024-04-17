@@ -46,18 +46,23 @@
     <Compile Include="Exam_2\AVL_Tree.cs" />
     <Compile Include="Exam_2\Dictionary.cs" />
     <Compile Include="Exam_2\PriorityQueue.cs" />
-    <Compile Include="UserUI\AVLView.cs" />
-    <Compile Include="UserUI\DictView.cs" />
+    <Compile Include="Exam_2\Sort.cs" />
+    <Compile Include="UserUI\Algorithms\AlgoInfo.cs" />
+    <Compile Include="UserUI\AlgoUI.cs" />
+    <Compile Include="UserUI\Algorithms\AlgoUiComponents.cs" />
+    <Compile Include="UserUI\DataStructures\AVLView.cs" />
+    <Compile Include="UserUI\DataStructures\DictView.cs" />
     <Compile Include="UserUI\Exam2UI.cs" />
     <Compile Include="UserUI\ExamViewer.cs" />
     <Compile Include="UserUI\MainUI.cs" />
-    <Compile Include="UserUI\QueueView.cs" />
-    <Compile Include="UserUI\View.cs" />
+    <Compile Include="UserUI\DataStructures\QueueView.cs" />
+    <Compile Include="UserUI\DataStructures\View.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserUI\ADTViewer.cs" />
+    <Compile Include="UserUI\DataStructures\ADTViewer.cs" />
     <Compile Include="Utilities\Disclaimer.cs" />
     <Compile Include="Utilities\Prompts.cs" />
+    <Compile Include="Utilities\AlgoUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

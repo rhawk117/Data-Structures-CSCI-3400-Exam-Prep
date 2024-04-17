@@ -27,6 +27,8 @@ namespace _3400_DSA_Prep.UserUI
                                                                                
           *=====================================================================*
             ";
+            color = ConsoleColor.DarkBlue;
+
         }
 
         protected override void handleKeys(char keyPressed)

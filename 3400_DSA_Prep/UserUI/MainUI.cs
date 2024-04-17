@@ -154,7 +154,7 @@ namespace _3400_DSA_Prep.UserUI
             {
                 // algos
                 case 'a':
-                    //this.switchWindow(new AlgoUI());
+                    this.switchWindow(new AlgoUI());
                     break;
 
                 // exam 1
