@@ -58,20 +58,35 @@ namespace _3400_DSA_Prep
             hashTable.Clear();
         }
 
+        protected override void asciiArt()
+        {
+            ForegroundColor = ConsoleColor.Magenta;
+            WriteLine(@"
+            =========================================                    
+                    |              |    
+                    |---.,---.,---.|---.
+                    |   |,---|`---.|   |
+                    `   '`---^`---'`   '
+            ");
+        }
         public override void Remove()
         {
-            WriteLine("[ KEYS TO REMOVE ]");
+            removeMsg();
+            Write(@"
+            *===============================*
+            |     [ Keys in Hash Table ]    |
+            *===============================*
+            ");
             foreach (int k in hashTable.GetKeys())
             {
-                Write($"{k}, ");
+                WriteLine($"\t\t[>] {k} [<]");
             }
-            int keyToRmve = getIntput($"\n[-] Enter a key to Remove from the {type} or q to quit: ");
-
+            int keyToRmve = getIntput($"\n[-] Enter a key displayed above to Remove from the hash table or q to quit: ");
+            ResetColor();
             if (keyToRmve != -1)
             {
                 remove(keyToRmve);
             }
-
             else
             {
                 Run();
@@ -84,17 +99,17 @@ namespace _3400_DSA_Prep
         {
             try
             {
-                WriteLine($"[ Removing {key} from the {type}... ]");
+                WriteLine($"[-] Removing {key} from the {type}... [-]");
                 hashTable.Remove(key);
             }
             catch (KeyNotFoundException)
             {
-                WriteLine($"[ {key} does not exist in the {type}. ]");
+                Prompts.errorMessage($"[ {key} does not exist in the {type}. ]");
                 error();
             }
             catch (ApplicationException)
             {
-                WriteLine($"[ Something went horribly Wrong ]");
+                Prompts.errorMessage($"[ Something went horribly Wrong ]");
                 error();
             }
         }
@@ -116,18 +131,26 @@ namespace _3400_DSA_Prep
                 size = getSize();
             }
             WriteLine($"[i] Size will be {size} (default is 31)\n[ Press ENTER ]");
-            ReadLine();
-
+            ReadKey();
+            string type = "Not Set";
             Dict<int, int>.CollisionRes strategy = Dict<int, int>.CollisionRes.Double;
             if (confirmAction("Collision Strategy"))
             {
-                strategy = selectCollisonStrategy();
+                strategy = selectCollisonStrategy(ref type);
             }
-            WriteLine("[i] Collision strategy has been set, (default is double).\n[ Press ENTER ]");
+            else
+            {
+                type = "Double";
+            }
+            WriteLine($"[i] Collision strategy has been set to {type}, (default is double).\n[ Press ENTER ]");
             ReadLine();
 
             return new Dict<int, int>(size, strategy);
         }
+
+
+
+
 
         private static bool confirmAction(string attr)
         {
@@ -154,7 +177,7 @@ namespace _3400_DSA_Prep
                 return getSize();
             }
         }
-        private static Dict<int, int>.CollisionRes selectCollisonStrategy()
+        private static Dict<int, int>.CollisionRes selectCollisonStrategy(ref string type)
         {
             WriteLine(@"
             =================================================================
@@ -171,27 +194,31 @@ namespace _3400_DSA_Prep
                 
             ");
             char key = ReadKey().KeyChar;
-            return choiceMap(key);
+            var strat = choiceMap(key, ref type);
+            return strat;
         }
 
-        private static Dict<int, int>.CollisionRes choiceMap(char key)
+        private static Dict<int, int>.CollisionRes choiceMap(char key, ref string type)
         {
             switch (key)
             {
                 case 'l':
+                    type = "Linear";
                     return Dict<int, int>.CollisionRes.Linear;
 
 
                 case 'q':
+                    type = "Quadratic";
                     return Dict<int, int>.CollisionRes.Quad;
 
 
                 case 'd':
+                    type = "Double";
                     return Dict<int, int>.CollisionRes.Double;
 
                 default:
                     WriteLine("[!] Select a Valid Collision strategy or type q to quit");
-                    return selectCollisonStrategy();
+                    return selectCollisonStrategy(ref type);
             }
         }
     }

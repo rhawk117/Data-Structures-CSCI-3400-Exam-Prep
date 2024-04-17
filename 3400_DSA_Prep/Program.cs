@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _3400_DSA_Prep.UserUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,9 @@ namespace _3400_DSA_Prep
     {
         static void Main(string[] args)
         {
-            Disclaimer.StartUp();
+            //Disclaimer.StartUp();
+            Exam2UI t = new Exam2UI();
+            t.RenderUI();
 
         }
     }

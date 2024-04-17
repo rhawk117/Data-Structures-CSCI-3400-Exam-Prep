@@ -13,24 +13,31 @@ namespace _3400_DSA_Prep
         public View(string type)
         {
             title = $@"
-        ================================================
-                [ {type} Visualizer ]
-
-                [ a ] Add
-                [ r ] Remove
-                [ c ] Clear / Reset
-                [ v ] View {type}
-                [ q ] Quit
-          =============================================            
-            ";
+            ==========================================
+                      [ {type} Visualizer ]          
+            ======================================== 
+                   << Select A Menu Option >>                      
+                                                    
+                [ a ] - Add                          
+                [ r ] - Remove                        
+                [ c ] - Clear / Reset                 
+                [ v ] - View {type}                   
+                [ q ] - Quit                          
+                                                    
+            ========================================           
+           ";
             this.type = type;
         }
+        protected virtual void asciiArt()
+        {
 
+        }
         public void Run()
         {
             Clear();
+            asciiArt();
             WriteLine(title);
-
+            ResetColor();
             char key = ReadKey().KeyChar;
             key = char.ToLower(key);
 
@@ -77,28 +84,28 @@ namespace _3400_DSA_Prep
 
         protected void ClearADT()
         {
-            char c;
+            Clear(); char c;
             Write($@"
-            [ ? ] Clear the {type} [ ? ]
+                 [ ? ] Clear the {type} [ ? ]
             [ ! ] Warning this cannot be undone [ ! ]
             
-            >> Type Y to proceed or anything else to back out: 
+            >> Type 'Y' to proceed or anything else to back out: 
             ");
             c = char.ToLower(ReadKey(true).KeyChar);
             if (c != 'y')
             {
                 WriteLine($"[ ... ] Cancelling clearing the {type}");
-                enterToContinue();
-                return;
             }
-            WriteLine($"[ X ] Clearing the {type} [ X ]");
-            doClear();
+            else
+            {
+                WriteLine($"[ X ] Clearing the {type} [ X ]");
+                doClear();
+            }
             enterToContinue();
         }
 
         protected virtual void doClear() { }
 
-        // peek DRY (don't repeat yourself) principle
         protected void enterToContinue()
         {
             WriteLine("\n[ Press Enter to Continue... ]\n");
@@ -124,13 +131,29 @@ namespace _3400_DSA_Prep
             }
         }
 
+        private void addMsg()
+        {
+            ForegroundColor = ConsoleColor.DarkGreen;
+            WriteLine(@"
+            *------------------------------*                   
+            |   ____       __       ____   | 
+            |  |   _|    _|  |_    |_   |  |  
+            |  |  |     |_    _|     |  |  |  
+            |  |  |_      |__|      _|  |  |  
+            |  |____|              |____|  | 
+            |                              |
+            ");
+        }
+
         public void Add()
         {
-            char choice;
-            WriteLine(@"
+            Clear();
 
+            char choice;
+            addMsg();
+            WriteLine(@"
             *==============================*
-            |     [ Add Options ]          |
+            |      [ Add Options ]         |
             |                              |
             |  [ s ] Add Single Item       |
             |  [ m ] Add Multiple Items    |
@@ -138,7 +161,8 @@ namespace _3400_DSA_Prep
             |                              |
             *==============================*
 
-            ");
+            "); ResetColor();
+
             choice = char.ToLower(ReadKey().KeyChar);
             if (choice != 'q') handleAdd(choice);
         }
@@ -177,12 +201,13 @@ namespace _3400_DSA_Prep
                 }
                 catch (Exception ex)
                 {
-                    WriteLine($@"
-                [ An exception occured while trying to add your collection ]
-                         {ex.Message}
-                Likely due to the collection being full as such no further values
-                from the collection typed will be added. 
-                ");
+                    Prompts.errorMessage($@"
+                    [ An exception occured while trying to add your collection ]
+                             {ex.Message}
+                    Likely due to the collection being full as such no further values
+                    from the collection typed will be added succesfully. 
+
+                    ");
                 }
                 WriteLine("[ Action Complete ]");
                 ResetColor();
@@ -195,6 +220,20 @@ namespace _3400_DSA_Prep
                 add(additions[i]);
             }
             WriteLine($"[ All {additions.Count} have been added.. ]");
+        }
+
+        protected void removeMsg()
+        {
+            ForegroundColor = ConsoleColor.DarkRed;
+            WriteLine(@"
+            *------------------------------*
+            |   ____                ____   |
+            |  |   _|    ______    |_   |  |
+            |  |  |     |______|     |  |  |
+            |  |  |_                _|  |  |
+            |  |____|              |____|  |
+            |                              |
+            ");
         }
 
         // can't really generalize this one, children classes implement own

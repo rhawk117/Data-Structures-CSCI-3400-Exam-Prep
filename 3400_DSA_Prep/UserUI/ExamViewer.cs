@@ -8,6 +8,51 @@ namespace _3400_DSA_Prep.UserUI
 {
     public class ExamViewer
     {
+        protected string menuText;
+
+        protected View currentUI;
+
+        // used in ctor by children
+        protected virtual void setComponents() { }
+
+        public ExamViewer()
+        {
+            currentUI = null;
+        }
+
+        public void RenderUI()
+        {
+            char input;
+
+            Console.Clear();
+            Console.WriteLine(menuText);
+
+            input = char.ToLower(Console.ReadKey().KeyChar);
+
+            if (input == 'q')
+            {
+                Console.WriteLine("\t\t[-] Exiting UI.. [-]");
+            }
+            else
+            {
+                handleKeys(input);
+            }
+        }
+
+        protected virtual void handleKeys(char keyPressed)
+        {
+
+        }
+        protected void loopUI()
+        {
+            currentUI = null;
+            RenderUI();
+        }
+        protected void switchWindow(View newUI)
+        {
+            currentUI = newUI;
+            currentUI.Run();
+        }
 
 
     }

@@ -29,7 +29,16 @@ namespace _3400_DSA_Prep
                 error_msg();
             }
         }
-
+        protected override void asciiArt()
+        {
+            ForegroundColor = ConsoleColor.Cyan;
+            WriteLine(@"
+            ===========================================                                               
+                        ,---..    ,|    
+                        ,---| \  / |    
+                        `---^  `'  `---'
+           ");
+        }
         protected override void add(int val)
         {
             try
@@ -70,8 +79,9 @@ namespace _3400_DSA_Prep
             }
             Clear();
             char c;
+            removeMsg();
             WriteLine(@"
-
+            
             *===============================*
             |    [ Select an Option ]       |
             |                               |
@@ -80,8 +90,8 @@ namespace _3400_DSA_Prep
             | [ q ] Go Back                 |
             |                               |
             *===============================*
-
             ");
+            ResetColor();
             c = char.ToLower(ReadKey().KeyChar);
 
             if (c != 'q')

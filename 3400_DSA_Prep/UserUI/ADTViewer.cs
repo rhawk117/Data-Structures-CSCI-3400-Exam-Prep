@@ -7,7 +7,7 @@ namespace _3400_DSA_Prep
     public class ADTViewer
     {
         // Cool ASCII Art from - https://edukits.co/text-art/
-        private const string MENUTEXT = @"
+        private string MENUTEXT = @"
     ==================================================================================
     |       __  _____ _  _    ___   ___   __                                         |
     |      / / |___ /| || |  / _ \ / _ \  \ \                                        |
@@ -58,12 +58,15 @@ namespace _3400_DSA_Prep
                 case 'a':
                     switchWindow(new QueueView());
                     break;
+
                 case 'b':
                     switchWindow(new AVLView());
                     break;
+
                 case 'c':
                     switchWindow(new DictView());
                     break;
+
                 default:
                     Console.WriteLine("[ Select a valid menu option (a, b, c, q) ]");
                     break;

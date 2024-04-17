@@ -19,7 +19,22 @@ namespace _3400_DSA_Prep
                 queue = q;
             }
         }
-
+        protected override void asciiArt()
+        {
+            ForegroundColor = ConsoleColor.Blue;
+            WriteLine(@"
+            ===========================================
+                ,---.,---.o,---.,---.o--.--   
+                |---'|---'.|   ||---'.  |,   .
+                |    |  \ ||   ||  \ |  ||   |
+                `    `   ```---'`   ``  ``---|
+                                         `---'
+                ,---.                         
+                |   |.   .,---..   .,---.     
+                |   ||   ||---'|   ||---'     
+                `---\`---'`---'`---'`---'     
+           ");
+        }
         protected override void add(int val)
         {
             if (queue.IsFull())
@@ -35,7 +50,10 @@ namespace _3400_DSA_Prep
 
         public override void Remove()
         {
+            removeMsg();
+            WriteLine("            *------------------------------*");
             WriteLine("[ Removing Cell with the greatest (smallest value) priority... ]");
+            ResetColor();
             try
             {
                 queue.Remove();
@@ -63,7 +81,7 @@ namespace _3400_DSA_Prep
         protected override void ViewADT()
         {
             WriteLine(@"
-            |================================================|
+            *================================================*
             | [ Select a View for the Heap \ Priority Queue ]|
             |                                                |
             |    [ a ] Array View - Table Array              |
