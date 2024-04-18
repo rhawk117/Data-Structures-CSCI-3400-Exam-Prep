@@ -1,5 +1,4 @@
 ﻿using _3400_DSA_Prep.UserUI;
-using _3400_DSA_Prep.UserUI.DataStructures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +12,10 @@ namespace _3400_DSA_Prep
         static void Main(string[] args)
         {
             //Disclaimer.StartUp();
-            //MainUI main = new MainUI();
-            //main.Run();
-            var q = new StackView();
-            q.Run();
+            MainUI main = new MainUI();
+            main.Run();
+
+
 
         }
     }

@@ -107,15 +107,96 @@ namespace _3400_DSA_Prep
             safePrint();
 
         }
-
         private void safePrint()
         {
             Prompts.enterToContinue();
             Clear();
             tree.Prints();
             Prompts.enterToContinue();
-
         }
+        public override void Remove()
+        {
 
+            Clear();
+            if (tree.IsEmpty)
+            {
+                Prompts.errorMessage("Tree is Empty");
+                return;
+            }
+
+
+            removeMsg();
+            char choice;
+
+            WriteLine(@"
+            =====================================
+                [ Select an Option To Remove ]
+
+                [ S ] - Remove Specific Value
+                [ R ] - Remove Root
+                [ Q ] - Go Back 
+            =====================================
+            ");
+
+            ResetColor();
+            choice = char.ToLower(ReadKey().KeyChar);
+
+            if (choice == 'q')
+            {
+                return;
+            }
+            else if (choice == 'r')
+            {
+                remove(tree.peekRoot());
+            }
+            else
+            {
+                selectRemove();
+            }
+            Remove();
+        }
+        private void handleRemove(char choice)
+        {
+            switch (choice)
+            {
+                case 'r':
+                    remove(tree.peekRoot());
+                    break;
+
+                case 's':
+                    selectRemove();
+                    break;
+
+                default:
+                    Prompts.errorMessage("Invalid Menu Option");
+                    break;
+            }
+        }
+        private void selectRemove()
+        {
+            tree.InOrder();
+            int val = getIntput("[-] Select a value to remove from the BST:");
+            if (val == -1)
+            {
+                Remove();
+            }
+            else if (tree.TryFind(ref val) == false)
+            {
+                Prompts.errorMessage("Value not found in the BST");
+                selectRemove();
+            }
+            else
+            {
+                remove(val);
+            }
+        }
+        protected override void remove(int val)
+        {
+            WriteLine($"[ Pre Removal of -> {val}");
+            safePrint();
+            tree.Remove(val);
+            WriteLine($"[-] Post Removal of -> {val} ]");
+            safePrint();
+        }
     }
 }

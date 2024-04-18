@@ -466,6 +466,31 @@ namespace _3400_Exam1_Prep
         }
         public void Prints(Node subRoot) => TreePrinter.Print(subRoot);
 
+        public List<T> GetData()
+        {
+            var items = new List<T>();
+            addItems(root, items);
+            return items;
+        }
+
+        private void addItems(Node ptr, List<T> items)
+        {
+            if (ptr == null) return;
+
+            items.Add(ptr.Data);
+            addItems(ptr.Left, items);
+            addItems(ptr.Right, items);
+        }
+        public T peekRoot()
+        {
+            T data = default;
+            if (root != null)
+            {
+                data = root.Data;
+            }
+            return data;
+        }
+        public bool IsEmpty => root == null;
         public static class TreePrinter
         {
             private class NodeInfo

@@ -28,10 +28,7 @@ namespace _3400_DSA_Prep
            ";
             this.type = type;
         }
-        protected virtual void asciiArt()
-        {
-
-        }
+        protected virtual void asciiArt() { }
         public void Run()
         {
             Clear();

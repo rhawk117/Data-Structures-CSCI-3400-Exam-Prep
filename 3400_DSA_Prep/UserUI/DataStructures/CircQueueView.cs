@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace _3400_DSA_Prep.UserUI.DataStructures
+namespace _3400_DSA_Prep
 {
     public class CircQueueView : View
     {
