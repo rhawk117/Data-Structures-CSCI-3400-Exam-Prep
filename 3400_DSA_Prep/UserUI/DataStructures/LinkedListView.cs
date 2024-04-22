@@ -76,6 +76,7 @@ namespace _3400_DSA_Prep
             WriteLine($"[ {list} ]");
             ResetColor();
         }
+
         public override void Remove()
         {
             Clear();
@@ -122,7 +123,5 @@ namespace _3400_DSA_Prep
         {
             list.Reset();
         }
-
-
     }
 }

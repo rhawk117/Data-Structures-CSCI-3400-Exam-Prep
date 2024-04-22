@@ -76,10 +76,7 @@ namespace _3400_DSA_Prep.UserUI
         ==================================================================";
 
         private ExamViewer activeWindow;
-        public MainUI()
-        {
-            activeWindow = null;
-        }
+        public MainUI() => activeWindow = null;
 
         public void runHeader()
         {

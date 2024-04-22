@@ -32,7 +32,7 @@ namespace _3400_DSA_Prep
                     |                 |    
                     |---.    ,---.    |--- 
                     |   |    `---.    |    
-                    `---'    `---'    `---'");
+                    `---'    `---'    `--- ");
         }
 
         protected override void ViewADT()
@@ -94,6 +94,7 @@ namespace _3400_DSA_Prep
                 Prompts.errorMessage("Cannot Add Duplicate Values to the AVL Tree");
                 return;
             }
+
             WriteLine("[+] Pre Insertion [+]");
             safePrint();
 
@@ -105,8 +106,8 @@ namespace _3400_DSA_Prep
 
             WriteLine($"[+] Post Insertion of -> {val} ]");
             safePrint();
-
         }
+
         private void safePrint()
         {
             Prompts.enterToContinue();
@@ -114,10 +115,12 @@ namespace _3400_DSA_Prep
             tree.Prints();
             Prompts.enterToContinue();
         }
+
         public override void Remove()
         {
 
             Clear();
+
             if (tree.IsEmpty)
             {
                 Prompts.errorMessage("Tree is Empty");
@@ -135,6 +138,7 @@ namespace _3400_DSA_Prep
                 [ S ] - Remove Specific Value
                 [ R ] - Remove Root
                 [ Q ] - Go Back 
+            
             =====================================
             ");
 
@@ -197,6 +201,10 @@ namespace _3400_DSA_Prep
             tree.Remove(val);
             WriteLine($"[-] Post Removal of -> {val} ]");
             safePrint();
+        }
+        protected override void doClear()
+        {
+            tree.Clear();
         }
     }
 }

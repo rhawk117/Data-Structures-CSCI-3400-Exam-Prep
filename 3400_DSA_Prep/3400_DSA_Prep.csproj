@@ -60,6 +60,7 @@
     <Compile Include="UserUI\DataStructures\DictView.cs" />
     <Compile Include="UserUI\DataStructures\LinkedListView.cs" />
     <Compile Include="UserUI\DataStructures\StackView.cs" />
+    <Compile Include="UserUI\Descriptor.cs" />
     <Compile Include="UserUI\Exam1UI.cs" />
     <Compile Include="UserUI\Exam2UI.cs" />
     <Compile Include="UserUI\ExamViewer.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserUI\DataStructures\ADTViewer.cs" />
+    <Compile Include="UserUI\MasterUI.cs" />
     <Compile Include="Utilities\Disclaimer.cs" />
     <Compile Include="Utilities\Prompts.cs" />
     <Compile Include="Utilities\AlgoUtils.cs" />
@@ -76,6 +78,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UserUI\DataStructures\Graph\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

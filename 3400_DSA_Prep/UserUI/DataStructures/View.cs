@@ -67,7 +67,6 @@ namespace _3400_DSA_Prep
                     WriteLine("[ Select a valid menu option (a, r, v, q) ]");
                     break;
             }
-
             Run();
         }
 

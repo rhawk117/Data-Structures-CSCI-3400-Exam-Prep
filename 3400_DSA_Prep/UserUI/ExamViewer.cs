@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3400_DSA_Prep.UserUI
+namespace _3400_DSA_Prep
 {
     public class ExamViewer
     {
@@ -17,10 +17,8 @@ namespace _3400_DSA_Prep.UserUI
         // used in ctor by children
         protected virtual void setComponents() { }
 
-        public ExamViewer()
-        {
-            currentUI = null;
-        }
+        public ExamViewer() => currentUI = null;
+
 
         public void RenderUI()
         {
@@ -43,11 +41,13 @@ namespace _3400_DSA_Prep.UserUI
         }
 
         protected virtual void handleKeys(char keyPressed) { }
+
         protected void loopUI()
         {
             currentUI = null;
             RenderUI();
         }
+
         protected virtual void switchWindow(View newUI)
         {
             currentUI = newUI;
