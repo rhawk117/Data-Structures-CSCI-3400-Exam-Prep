@@ -8,8 +8,6 @@ namespace _3400_DSA_Prep
 {
     public class Exam1UI : ExamViewer
     {
-        // LinkedListView, StackView, CircQueueView, BST
-
         public Exam1UI() : base()
         {
             setComponents();

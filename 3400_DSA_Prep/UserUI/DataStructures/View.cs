@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _3400_DSA_Prep.UserUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using static System.Console;
@@ -21,7 +22,8 @@ namespace _3400_DSA_Prep
                 [ a ] - Add                          
                 [ r ] - Remove                        
                 [ c ] - Clear / Reset                 
-                [ v ] - View {type}                   
+                [ v ] - View {type}     
+                [ d ] - Description
                 [ q ] - Quit                          
                                                     
             ========================================           
@@ -63,11 +65,24 @@ namespace _3400_DSA_Prep
                     ClearADT();
                     break;
 
+                case 'd':
+                    getDescription();
+                    break;
+
                 default:
                     WriteLine("[ Select a valid menu option (a, r, v, q) ]");
                     break;
             }
             Run();
+        }
+
+
+
+        private void getDescription()
+        {
+            Console.Clear();
+            Descriptor description = Descriptor.FindDescriptor(type);
+            description.RenderDescription();
         }
 
         /// <summary>

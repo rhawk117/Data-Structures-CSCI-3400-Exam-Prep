@@ -129,11 +129,13 @@ namespace _3400_DSA_Prep.UserUI
             Console.Clear();
             Console.WriteLine(MENU);
             keyPressed = char.ToLower(Console.ReadKey().KeyChar);
+
             if (keyPressed == 'q')
             {
                 Console.WriteLine("\t\t[ Thank you for using my Program ]");
                 return;
             }
+
             handleKeyInput(keyPressed);
 
         }
@@ -167,7 +169,7 @@ namespace _3400_DSA_Prep.UserUI
 
                 // final exam
                 case 'f':
-                    //this.switchWindow(new MasterUI());
+                    this.switchWindow(new MasterUI());
                     break;
 
                 // help
