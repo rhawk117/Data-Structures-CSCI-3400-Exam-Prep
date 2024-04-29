@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3400_Exam1_Prep.Practice
+namespace _3400_Exam_Prep.Practice
 {
     public class OurStack<T>
     {

@@ -47,8 +47,8 @@ namespace _3400_DSA_Prep.Practice
                 // replace with the generator for the class your testing
                 var collection = Generator.LinkedList(c.Collection);
 
-                var result = collection.Contains(1); // call method your testing 
                 Console.WriteLine(c);
+                var result = collection.Contains(1); // call method your testing 
                 Console.WriteLine($"Actual Output: {result}\n");
             }
         }
