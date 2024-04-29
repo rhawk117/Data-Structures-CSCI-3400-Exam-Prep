@@ -21,7 +21,7 @@ namespace _3400_DSA_Prep.Practice
 
         private static TestCase[] GenerateCases()
         {
-            // Use this method to generate test cases
+            // Use this method to generate test cases (e.g)
             TestCase[] cases = new TestCase[]
             {
                 new TestCase(
@@ -44,7 +44,7 @@ namespace _3400_DSA_Prep.Practice
             var cases = GenerateCases();
             foreach (var c in cases)
             {
-                // replace with class your testing
+                // replace with the generator for the class your testing
                 var collection = Generator.LinkedList(c.Collection);
 
                 var result = collection.Contains(1); // call method your testing 
