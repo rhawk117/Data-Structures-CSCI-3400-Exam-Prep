@@ -15,8 +15,6 @@ namespace _3400_DSA_Prep
             MainUI main = new MainUI();
             main.Run();
 
-
-
         }
     }
 }

@@ -20,6 +20,12 @@ namespace _3400_DSA_Prep
             return ranums;
         }
 
+        public static void Line()
+        {
+            Console.WriteLine("=========================================================");
+        }
+
+
         private static List<int> generateRandom(int size = 20, int min = 1, int max = 101)
         {
             Console.WriteLine("[ i ] Generating a random collection.... [ i ]");

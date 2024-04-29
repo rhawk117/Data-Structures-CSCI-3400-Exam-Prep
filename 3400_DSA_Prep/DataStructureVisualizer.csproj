@@ -51,6 +51,17 @@
     <Compile Include="Exam_2\Dictionary.cs" />
     <Compile Include="Exam_2\PriorityQueue.cs" />
     <Compile Include="Exam_2\Sort.cs" />
+    <Compile Include="Graph\Edge.cs" />
+    <Compile Include="Graph\Node.cs" />
+    <Compile Include="Graph\OurGraph.cs" />
+    <Compile Include="Practice\AVL.cs" />
+    <Compile Include="Practice\BST.cs" />
+    <Compile Include="Practice\CircularQueue.cs" />
+    <Compile Include="Practice\Dictionary.cs" />
+    <Compile Include="Practice\LinkedList.cs" />
+    <Compile Include="Practice\PrioQueue.cs" />
+    <Compile Include="Practice\Stack.cs" />
+    <Compile Include="Practice\Testing.cs" />
     <Compile Include="UserUI\Algorithms\AlgoInfo.cs" />
     <Compile Include="UserUI\AlgoUI.cs" />
     <Compile Include="UserUI\Algorithms\AlgoUiComponents.cs" />

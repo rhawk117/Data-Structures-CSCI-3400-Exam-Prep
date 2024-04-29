@@ -40,7 +40,7 @@ namespace _3400_DSA_Prep
             |            [ B ] - Bubble Sort                           |
             |            [ S ] - Selection Sort                        |
             |            [ I ] - Insertion Sort                        |
-            |            [ Q ] - Quick Sort                            | 
+            |            [ F ] - Quick Sort                            | 
             |            [ L ] - Shell Sort                            |
             |            [ M ] - Merge Sort                            |
             |            [ H ] - Heap Sort                             |
@@ -67,7 +67,7 @@ namespace _3400_DSA_Prep
                     setActiveWindow(new InsertionSort());
                     break;
 
-                case 'q':
+                case 'f':
                     setActiveWindow(new QuickSort());
                     break;
 
