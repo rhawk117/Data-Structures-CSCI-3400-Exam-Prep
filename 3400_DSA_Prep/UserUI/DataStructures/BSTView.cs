@@ -23,7 +23,6 @@ namespace _3400_DSA_Prep
                 tree = aTree;
             }
         }
-
         protected override void asciiArt()
         {
             ForegroundColor = ConsoleColor.Blue;
@@ -34,7 +33,6 @@ namespace _3400_DSA_Prep
                     |   |    `---.    |    
                     `---'    `---'    `--- ");
         }
-
         protected override void ViewADT()
         {
             Clear();
@@ -86,7 +84,6 @@ namespace _3400_DSA_Prep
             Prompts.enterToContinue();
             ViewADT();
         }
-
         protected override void add(int val)
         {
             if (tree.TryFind(ref val))
@@ -115,10 +112,8 @@ namespace _3400_DSA_Prep
             tree.Prints();
             Prompts.enterToContinue();
         }
-
         public override void Remove()
         {
-
             Clear();
 
             if (tree.IsEmpty)

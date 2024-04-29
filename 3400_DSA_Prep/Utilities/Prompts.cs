@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static System.Console;
 
 namespace _3400_DSA_Prep
@@ -29,7 +25,6 @@ namespace _3400_DSA_Prep
             ==================================================================================
             ");
         }
-
         public static void errorMessage(string warning)
         {
             ForegroundColor = ConsoleColor.Red;
@@ -43,16 +38,10 @@ namespace _3400_DSA_Prep
             WriteLine("\n\t\t[>] Press ENTER to Continue [<]");
             ReadKey(); color();
         }
-
         public static void delayMessage(string message, int delay = 2000)
         {
             WriteLine(message);
             System.Threading.Thread.Sleep(delay);
         }
-
-
-
-
-
     }
 }

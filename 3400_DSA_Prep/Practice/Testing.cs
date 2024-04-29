@@ -1,10 +1,7 @@
 ﻿using _3400_Exam_Prep.Practice;
 using _3400_Exam1_Prep.Practice;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _3400_DSA_Prep.Practice
 {

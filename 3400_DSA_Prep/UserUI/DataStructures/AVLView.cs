@@ -142,14 +142,12 @@ namespace _3400_DSA_Prep
                 remove(rmveVal);
             }
         }
-
         protected void safePrint()
         {
             enterToContinue();
             Clear();
             avl.Prints();
         }
-
         protected override void doClear() => avl.Clear();
         protected override void remove(int val)
         {
@@ -176,7 +174,6 @@ namespace _3400_DSA_Prep
             }
 
         }
-
         protected override void ViewADT()
         {
             emptyCheck();
@@ -202,8 +199,6 @@ namespace _3400_DSA_Prep
                 handleViewer(k);
             }
         }
-
-
         private void handleViewer(char c)
         {
             switch (c)

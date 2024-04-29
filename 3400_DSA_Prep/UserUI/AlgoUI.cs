@@ -95,7 +95,5 @@ namespace _3400_DSA_Prep
             activeUI = window;
             activeUI.Run();
         }
-
-
     }
 }

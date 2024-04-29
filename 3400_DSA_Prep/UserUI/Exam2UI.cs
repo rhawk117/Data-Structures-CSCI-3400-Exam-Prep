@@ -30,7 +30,6 @@ namespace _3400_DSA_Prep
             color = ConsoleColor.DarkBlue;
 
         }
-
         protected override void handleKeys(char keyPressed)
         {
             switch (keyPressed)

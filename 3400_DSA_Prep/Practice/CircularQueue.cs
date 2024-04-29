@@ -20,7 +20,6 @@ namespace _3400_Exam_Prep.Practice
         /// </summary>
         private T[] myArray;
 
-
         /// <summary>
         /// Construct an emtpy queue with a specified size
         /// </summary>
@@ -80,13 +79,10 @@ namespace _3400_Exam_Prep.Practice
         /// <summary>
         /// If the array is full (e.g. size = array.Length) then create a new, larger array and copy the data into it.
         /// </summary>
-
         public void Resize()
         {
             throw new Exception("Queue Resize is not implemented - you could implement it");
         }
-
-
         private void Increment(ref int value)
         {
             if (++value == myArray.Length)

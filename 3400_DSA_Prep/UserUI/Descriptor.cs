@@ -13,7 +13,6 @@ namespace _3400_DSA_Prep.UserUI
         protected Dictionary<string, string> commonOperations = new Dictionary<string, string>();
 
         protected string title;
-
         public Descriptor(string nameOf)
         {
             title = nameOf;
@@ -312,7 +311,6 @@ namespace _3400_DSA_Prep.UserUI
         {
             setComponents();
         }
-
         protected override void setComponents()
         {
             this.description = @"
@@ -332,12 +330,11 @@ namespace _3400_DSA_Prep.UserUI
                 ";
 
             this.commonOperations = new Dictionary<string, string>
-                {
+            {
                     { "Push" , "O(1)" },
                     { "Pop" , "O(1)" },
                     { "Peek" , "O(1)" }
-                };
+            };
         }
     }
-
 }

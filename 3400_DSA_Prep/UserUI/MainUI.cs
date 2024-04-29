@@ -190,12 +190,10 @@ namespace _3400_DSA_Prep.UserUI
             activeWindow = null;
             Run(1);
         }
-
         private void switchWindow(ExamViewer window)
         {
             activeWindow = window;
             activeWindow.RenderUI();
         }
-
     }
 }

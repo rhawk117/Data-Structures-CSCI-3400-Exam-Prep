@@ -54,7 +54,5 @@ namespace _3400_DSA_Prep
             }
             loopUI();
         }
-
-
     }
 }

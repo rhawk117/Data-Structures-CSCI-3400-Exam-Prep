@@ -16,10 +16,7 @@ namespace _3400_DSA_Prep
 
         // used in ctor by children
         protected virtual void setComponents() { }
-
         public ExamViewer() => currentUI = null;
-
-
         public void RenderUI()
         {
             char input;
@@ -39,15 +36,12 @@ namespace _3400_DSA_Prep
                 handleKeys(input);
             }
         }
-
         protected virtual void handleKeys(char keyPressed) { }
-
         protected void loopUI()
         {
             currentUI = null;
             RenderUI();
         }
-
         protected virtual void switchWindow(View newUI)
         {
             currentUI = newUI;
